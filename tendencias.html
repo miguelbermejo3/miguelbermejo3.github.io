@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="./tendencias.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>BetisHooliFans</title>
+</head>
+
+<body>
+    <div class="container">
+        <aside class="tendencias" id="tendencias">
+            <h2>Tendencias</h2>
+            <ul>
+                <li onclick="cargarTweets('#AdiosSergioCanales')"> #AdiosSergioCanales </li>
+                <li onclick="cargarTweets('#VuelveRubenCastro')"> #VuelveRubenCastro </li>
+                <li onclick="cargarTweets('#betisgranada')"> #betisgranada </li>
+                <!-- Agrega más tendencias según sea necesario -->
+            </ul>
+        </aside>
+        <main class="contenido" id="contenido">
+            <!-- Contenido principal de la página (se cargarán los tweets aquí) -->
+        </main>
+    </div>
+
+    <script src="tendencias-script.js"></script>
+    <script>
+        function cargarTweets(tendencia) {
+            // Simula la carga de tweets desde una fuente de datos (puedes reemplazar esto con una llamada a una API real)
+            const tweets = obtenerTweetsPorTendencia(tendencia);
+
+            // Actualiza el contenido principal con los tweets
+            const contenido = document.getElementById('contenido');
+            contenido.innerHTML = `<h2>Tweets sobre ${tendencia}</h2>`;
+
+            if (tweets.length === 0) {
+                contenido.innerHTML += '<p>No hay tweets disponibles.</p>';
+            } else {
+                tweets.forEach(tweet => {
+                    contenido.innerHTML += tweet;
+                });
+            }
+        }
+
+        function obtenerTweetsPorTendencia(tendencia) {
+            // Simula la obtención de diferentes tweets para cada tendencia
+            switch (tendencia) {
+                case '#AdiosSergioCanales':
+                    return [
+                        `
+                <div class="posts">
+                    <div class="post">
+                        <div class="user-avatar">
+                    <img src="./images/mujertrabajo.jpg">
+                </div>
+                <div class="post-content">
+                    <div class="post-user-info">
+                        <h4>AnaBetica</h4>
+                        <i class="fas fa-check-circle"></i>
+                        <span>@anitabetica3 10min</span>
+                    </div>
+                    <p class="post-text">Qué bueno es sergio Canales!! #AdiosSergioCanales</p>
+                    <div class="post-img">
+                        <img src="./images/canales.jpg">
+                    </div>
+                    <div class="post-icons">
+                        <i class="far fa-comment"></i>
+                        <i class="fas fa-retweet"></i>
+                        <i class="far fa-heart"></i>
+                        <i class="far fa-share-alt"></i>
+                    </div>
+                </div>
+                      
+                    </div>
+                    <!--SEGUNDO TWEET-->
+                    <div class="post">
+                        <div class="user-avatar">
+                    <img src="./images/mujertrabajo.jpg">
+                </div>
+                <div class="post-content">
+                    <div class="post-user-info">
+                        <h4>AnaBetica</h4>
+                        <i class="fas fa-check-circle"></i>
+                        <span>@anitabetica3 10min</span>
+                    </div>
+                    <p class="post-text">Qué bueno que viniste DON SERGIO CANALES!!! #AdiosSergioCanales</p>
+                    <div class="post-img">
+                        <img src="./images/canales2.JPG">
+                    </div>
+                    <div class="post-icons">
+                        <i class="far fa-comment"></i>
+                        <i class="fas fa-retweet"></i>
+                        <i class="far fa-heart"></i>
+                        <i class="far fa-share-alt"></i>
+                    </div>
+                </div>
+                      
+                    </div>
+                    <!--TERCER TWEET-->
+                    <div class="post">
+                        <div class="user-avatar">
+                    <img src="./images/fan.jpg">
+                </div>
+                <div class="post-content">
+                    <div class="post-user-info">
+                        <h4>Jose Angel Maria</h4>
+                        <i class="fas fa-check-circle"></i>
+                        <span>@joseangel34 10min</span>
+                    </div>
+                    <p class="post-text">Suerte y Gracias ídolo #AdiosSergioCanales</p>
+                    <div class="post-img">
+                        <img src="./images/canalesfelix.jpg">
+                    </div>
+                    <div class="post-icons">
+                        <i class="far fa-comment"></i>
+                        <i class="fas fa-retweet"></i>
+                        <i class="far fa-heart"></i>
+                        <i class="far fa-share-alt"></i>
+                    </div>
+                </div>
+                      
+                    </div>
+                    <!--Cuarto TWEET-->
+                    <div class="post">
+                        <div class="user-avatar">
+                    <img src="./images/fan2.jpg">
+                </div>
+                <div class="post-content">
+                    <div class="post-user-info">
+                        <h4>Maria Perez</h4>
+                        <i class="fas fa-check-circle"></i>
+                        <span>@Mariperez12 30min</span>
+                    </div>
+                    <p class="post-text">Me he emocionando viendo la última rueda de prensa de mi ídolo con nuestra camiseta. Gracias y suerte en tu futuro proyecto #AdiosSergioCanales</p>
+                    <div class="post-img">
+                        <img src="./images/lloroscanales.jpg">
+                    </div>
+                    <div class="post-icons">
+                        <i class="far fa-comment"></i>
+                        <i class="fas fa-retweet"></i>
+                        <i class="far fa-heart"></i>
+                        <i class="far fa-share-alt"></i>
+                    </div>
+                </div>
+                      
+                    </div>
+
+
+
+
+                </div>
+                `,
+
+                    ];
+                case '#VuelveRubenCastro':
+                    return [
+                        `
+                <div class="posts">
+                    <div class="post">
+                        <div class="user-avatar">
+                    <img src="./images/fan3.jpg">
+                </div>
+                <div class="post-content">
+                    <div class="post-user-info">
+                        <h4>Maria peralta</h4>
+                        <i class="fas fa-check-circle"></i>
+                        <span>@maribetica 10min</span>
+                    </div>
+                    <p class="post-text">Vuelve a casa por navidad Por favor!!!! #VuelveRubenCastro</p>
+                    <div class="post-img">
+                        <img src="./images/rcastro.jpg">
+                    </div>
+                    <div class="post-icons">
+                        <i class="far fa-comment"></i>
+                        <i class="fas fa-retweet"></i>
+                        <i class="far fa-heart"></i>
+                        <i class="far fa-share-alt"></i>
+                    </div>
+                </div>
+                      
+                    </div>
+                    <!--SEGUNDO TWEET-->
+                    <div class="post">
+                        <div class="user-avatar">
+                    <img src="./images/fan.jpg">
+                </div>
+                <div class="post-content">
+                    <div class="post-user-info">
+                        <h4>Jose Angel Maria</h4>
+                        <i class="fas fa-check-circle"></i>
+                        <span>@joseangel34 10min</span>
+                    </div>
+                    <p class="post-text">DESEANDO QUE LLEGUE EL PARTIDO BENÉFICO DEL ÍDOLO DE TODOS LOS BÉTICOS!!!! #VuelveRubenCastro</p>
+                    <div class="post-img">
+                        <img src="./images/castro2.jpg">
+                    </div>
+                    <div class="post-icons">
+                        <i class="far fa-comment"></i>
+                        <i class="fas fa-retweet"></i>
+                        <i class="far fa-heart"></i>
+                        <i class="far fa-share-alt"></i>
+                    </div>
+                </div>
+                      
+                    </div>
+                    <div class="post">
+                        <div class="user-avatar">
+                    <img src="./images/fan3.jpg">
+                </div>
+                <div class="post-content">
+                    <div class="post-user-info">
+                        <h4>Maria Peralta</h4>
+                        <i class="fas fa-check-circle"></i>
+                        <span>@maribetica 10min</span>
+                    </div>
+                    <p class="post-text">Pero cuantos goles tiene que marcar este tio para que vuelva a casa?????? @VuelveRubenCastro</p>
+                    <div class="post-img">
+                        <img src="./images/castro3.jpg">
+                    </div>
+                    <div class="post-icons">
+                        <i class="far fa-comment"></i>
+                        <i class="fas fa-retweet"></i>
+                        <i class="far fa-heart"></i>
+                        <i class="far fa-share-alt"></i>
+                    </div>
+                </div>
+                      
+                    </div>
+                    <div class="post">
+                        <div class="user-avatar">
+                    <img src="./images/apuestafabian.jpg">
+                </div>
+                <div class="post-content">
+                    <div class="post-user-info">
+                        <h4>Angel Salado</h4>
+                        <i class="fas fa-check-circle"></i>
+                        <span>@angelsalado3 10min</span>
+                    </div>
+                    <p class="post-text">Por favor Real Betis solo pido que por navidad se haga esto posiblee!!!! #VuelveRubenCastro</p>
+                    <div class="post-img">
+                        <img src="./images/castro4.jpeg">
+                    </div>
+                    <div class="post-icons">
+                        <i class="far fa-comment"></i>
+                        <i class="fas fa-retweet"></i>
+                        <i class="far fa-heart"></i>
+                        <i class="far fa-share-alt"></i>
+                    </div>
+                </div>
+                      
+                    </div>
+                </div>
+                `,
+                        // Puedes agregar más tweets para la tendencia 2 según sea necesario
+                    ];
+                case '#betisgranada':
+                    return [
+                        `
+                <div class="posts">
+                    <div class="post">
+                        <div class="user-avatar">
+                            <img src="./images/mujertrabajo.jpg">
+                        </div>
+                        <div class="post-content">
+                            <div class="post-user-info">
+                                <h4>AnaBetica</h4>
+                                <i class="fas fa-check-circle"></i>
+                                <span>@anitabetica3 10min</span>
+                            </div>
+                            <p class="post-text">Qué gran previa la de hoy! Gracias a la agrupación de Virgen de los reyes por tal espectáculo #betisgranada</p>
+                            <div class="post-video">
+                                <video controls>
+                                    <source src="./images/vreyes.mp4" type="video/mp4">
+                                    Tu navegador no soporta el elemento de video.
+                                </video>
+                            </div>
+                            <div class="post-icons">
+                                <i class="far fa-comment"></i>
+                                <i class="fas fa-retweet"></i>
+                                <i class="far fa-heart"></i>
+                                <i class="far fa-share-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!--SEGUNDO TWEET-->
+                    <div class="post">
+                        <div class="user-avatar">
+                            <img src="./images/betisperfil.jpg">
+                        </div>
+                        <div class="post-content">
+                            <div class="post-user-info">
+                                <h4>Real Betis Balompié 🌴💚</h4>
+                                <i class="fas fa-check-circle"></i>
+                                <span>@RealBetis 10min</span>
+                            </div>
+                            <p class="post-text">Ya van llegando los jugadores del #betis para el encuentro del  #betisgranada</p>
+                            <div class="post-video">
+                                <video controls>
+                                    <source src="./images/llegadaequipo.mp4" type="video/mp4">
+                                    Tu navegador no soporta el elemento de video.
+                                </video>
+                            </div>
+                            <div class="post-icons">
+                                <i class="far fa-comment"></i>
+                                <i class="fas fa-retweet"></i>
+                                <i class="far fa-heart"></i>
+                                <i class="far fa-share-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!--TERCER TWEET-->
+                    <div class="post">
+                        <div class="user-avatar">
+                            <img src="./images/afdlp.jpg">
+                        </div>
+                        <div class="post-content">
+                            <div class="post-user-info">
+                                <h4>Al Final De La Palmera</h4>
+                                <i class="fas fa-check-circle"></i>
+                                <span>@alfinaldelapalmera 10min</span>
+                            </div>
+                            <p class="post-text">💻Dónde ver Betis - Granada: canal de TV y streaming online del partido de LaLiga EA Sports 2023-2024 ⏱ #Betis #BetisGranada #LaLiga</p>
+                            <div class="post-img">
+                        <img src="./images/logobetis.PNG">
+                                    </div>
+                                    <div class="post-link">
+                                <a href="https://sevilla.abc.es/alfinaldelapalmera/noticias-betis/ver-betis-granada-canal-streaming-online-partido-20240112200201-nts.html#_tcode=OTNyaXAy" target="_blank">enlace</a>
+                            </div>
+                            <div class="post-icons">
+                                <i class="far fa-comment"></i>
+                                <i class="fas fa-retweet"></i>
+                                <i class="far fa-heart"></i>
+                                <i class="far fa-share-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                `,
+                        // Puedes agregar más tweets para la tendencia 3 según sea necesario
+                    ];
+                // Puedes agregar más casos según sea necesario para otras tendencias
+                default:
+                    return [];
+            }
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,132 @@
+
+
+<!DOCTYPE html>
+<html lang="en" lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" href="./mensajes.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <title>BetisHooliFans</title>
+    </head>
+
+<body>
+
+
+
+    <div class="container">
+        <button class="regresar-btn" onclick="irAtras()">Regresar</button>
+
+        <aside class="usuarios">
+            <h2>Usuarios</h2>
+            <ul>
+                <li class="active">
+                    <img src="./images/usuario2.jpeg">
+                    Antonio Salado</li>
+                <li>
+                    <img src="./images/mujertrabajo.jpg">
+                Anita Betica</li>
+                <li>Usuario3</li>
+                <!-- Agrega más usuarios según sea necesario -->
+            </ul>
+        </aside>
+        <main class="conversacion">
+            <header>
+                <h1>Conversación con @AntonioSalado</h1>
+                <p>@AntonioSalado</p>
+                
+            </header>
+            <section class="mensajes">
+                <div class="mensaje enviado">
+                    <p>Hola, ¿cómo estás?</p>
+                    <span>Fecha y hora</span>
+                </div>
+                <div class="mensaje recibido">
+                    <p>¡Hola! Estoy bien, ¿y tú?</p>
+                    <span>Fecha y hora</span>
+                </div>
+                <!-- Agrega más mensajes según sea necesario -->
+            </section>
+            <section class="nuevo-mensaje">
+                <textarea placeholder="Escribe tu mensaje..."></textarea>
+                <button>Enviar</button>
+            </section>
+        </main>
+    </div>
+
+ 
+
+<script>
+     function irAtras() {
+            history.back();
+        }
+    document.addEventListener('DOMContentLoaded', function () {
+        const usuarios = document.querySelectorAll('.usuarios li');
+        const mensajesContainer = document.querySelector('.conversacion .mensajes');
+        const nuevoMensajeTextarea = document.querySelector('.nuevo-mensaje textarea');
+        const enviarMensajeBtn = document.querySelector('.nuevo-mensaje button');
+
+        // Inicializa la conversación con el primer usuario
+        cambiarConversacion(usuarios[0]);
+
+        // Agrega un evento de clic a cada usuario
+        usuarios.forEach(function (usuario) {
+            usuario.addEventListener('click', function () {
+                cambiarConversacion(usuario);
+            });
+        });
+
+        // Agrega un evento de clic al botón de enviar mensaje
+        enviarMensajeBtn.addEventListener('click', function () {
+            enviarMensaje();
+        });
+
+        // Cambia la conversación al hacer clic en un usuario
+        function cambiarConversacion(usuario) {
+            // Marca el usuario activo
+            usuarios.forEach(function (u) {
+                u.classList.remove('active');
+            });
+            usuario.classList.add('active');
+
+            // Actualiza el título de la conversación
+            const usuarioNombre = usuario.textContent.trim();
+            document.querySelector('.conversacion header h1').textContent = `Conversación con ${usuarioNombre}`;
+
+            // Puedes cargar los mensajes del usuario desde una base de datos o cualquier fuente de datos aquí
+
+            // Limpia los mensajes actuales
+            mensajesContainer.innerHTML = '';
+        }
+
+        // Envía un nuevo mensaje
+        function enviarMensaje() {
+            const mensajeTexto = nuevoMensajeTextarea.value.trim();
+
+            if (mensajeTexto !== '') {
+                const nuevoMensaje = document.createElement('div');
+                nuevoMensaje.classList.add('mensaje', 'enviado');
+                nuevoMensaje.innerHTML = `<p>${mensajeTexto}</p><span>${obtenerFechaHora()}</span>`;
+                mensajesContainer.appendChild(nuevoMensaje);
+
+                // Puedes enviar el mensaje a través de una API o almacenarlo en una base de datos aquí
+
+                // Limpia el área de texto después de enviar el mensaje
+                nuevoMensajeTextarea.value = '';
+            }
+        }
+
+        // Obtiene la fecha y hora actual en un formato legible
+        function obtenerFechaHora() {
+            const fecha = new Date();
+            const options = { hour: 'numeric', minute: 'numeric' };
+            return fecha.toLocaleTimeString('es-ES', options);
+        }
+    });
+</script>
+
+<!-- ... Fin de tu HTML ... -->
+
+</body>
+</html>

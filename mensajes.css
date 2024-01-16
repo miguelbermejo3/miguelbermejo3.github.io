@@ -1,0 +1,130 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative; /* Agregado para el posicionamiento absoluto del botón "Regresar" */
+}
+
+.regresar-btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #1da1f2;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.regresar-btn:hover {
+    background-color: #0d8adf;
+}
+
+.usuarios {
+    flex: 1;
+    padding: 20px;
+    border-right: 1px solid #ccc;
+}
+
+.usuarios h2 {
+    color: #1da1f2;
+}
+
+.usuarios ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.usuarios li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.usuarios li.active {
+    background-color: #e6ecf0;
+}
+
+.usuarios img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.conversacion {
+    flex: 3;
+    padding: 20px;
+}
+
+header h1 {
+    color: #1da1f2;
+}
+
+header p {
+    color: #657786;
+}
+
+.mensajes {
+    margin-top: 20px;
+}
+
+.mensaje {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+.enviado {
+    background-color: #1da1f2;
+    color: #fff;
+}
+
+.recibido {
+    background-color: #e6ecf0;
+    color: #000;
+}
+
+.mensaje p {
+    margin: 0;
+}
+
+.mensaje span {
+    color: #657786;
+    font-size: 12px;
+}
+
+.nuevo-mensaje {
+    margin-top: 20px;
+}
+
+textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.enviar-btn {
+    background-color: #1da1f2;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.enviar-btn:hover {
+    background-color: #0d8adf;
+}
