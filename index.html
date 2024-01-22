@@ -1,57 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BETISHOOLIFANS</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-
-
-    <link rel="stylesheet" href="estilo.css">
-</head>
-<body>
-
-        <main>
-
-            <div class="contenedor__todo">
-                <div class="caja__trasera">
-                    <div class="caja__trasera-login">
-                        <h3>¿Ya tienes una cuenta?</h3>
-                        <p>Inicia sesión para entrar en la página</p>
-                        <button id="btn__iniciar-sesion">Iniciar Sesión</button>
+<html lang="en" lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" href="./estilo.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <title>BetisHooliFans</title>
+    </head>
+    <body>
+        <!--INICIO DE PÁGINA PRINCIPAL-->
+        <section class="main-page">
+            <!--INICIO DE LADO IZQUIERDO-->
+            <div class="left">
+                <div class="left-content">
+                    <div>
+                        <i class="fas fa-search"></i>
+                        <h3 class="left-content-heading">Encuentra tus
+                            intereses</h3>
                     </div>
-                    <div class="caja__trasera-register">
-                        <h3>¿Aún no tienes una cuenta?</h3>
-                        <p>Regístrate para que puedas iniciar sesión</p>
-                        <button id="btn__registrarse">Regístrarse</button>
+                    <div>
+                        <i class="fas fa-user-friends"></i>
+                        <h3 class="left-content-heading">Explore de lo que habla
+                            la gente</h3>
+                    </div>
+                    <div>
+                        <i class="fas fa-comment"></i>
+                        <h3 class="left-content-heading">Únete a la gente</h3>
                     </div>
                 </div>
-
-                <!--Formulario de Login y registro-->
-                <div class="contenedor__login-register">
-                    <!--Login-->
-                    <form action="" class="formulario__login">
-                        <h2>Iniciar Sesión</h2>
-                        <input type="text" placeholder="Correo Electronico">
-                        <input type="password" placeholder="Contraseña">
-                        <button>Entrar</button>
+            </div>
+            <!--FIN DE LADO IZQUIERDO-->
+            <!--INICIO DEL LADO DERECHO-->
+            <div class="right">
+                <div class="right-content">
+                    <form class="right-content-form">
+                        <input type="text" class="user-info"
+                            placeholder="email,telefono,usuario">
+                        <div>
+                            <input type="password" class="password"
+                                placeholder="password">
+                            <label>Olvidaste tu contraseña</label>
+                        </div>
+                        <button type="button" class="btn-top"><a
+                                href="reels.html">Iniciar sesión </a></button>
                     </form>
-
-                    <!--Register-->
-                    <form action="" class="formulario__register">
-                        <h2>Regístrarse</h2>
-                        <input type="text" placeholder="Nombre completo">
-                        <input type="text" placeholder="Correo Electronico">
-                        <input type="text" placeholder="Usuario">
-                        <input type="password" placeholder="Contraseña">
-                        <button>Regístrarse</button>
-                    </form>
+                    <div class="middle-content">
+                        <i class="fab fa-twitter"></i>
+                        <h1>Explore lo que está sucediendo en
+                            BetisHooliFans</h1>
+                        <h4>Únase hoy a BetisHooliFans</h4>
+                        <button type="button"
+                            class="sing-up">Registrarse</button>
+                        <button type="button" class="log-in">Iniciar
+                            sesión</button>
+                    </div>
                 </div>
             </div>
 
-        </main>
+            <!--FIN DEL LADO DERECHO-->
 
-        <script src="./login.js"></script>
-</body>
+            <!--INICIO DEL PIE DE PÁGINA-->
+            <footer class="main-page-footer">
+                <ul>
+                    <li><a href="#">Acerca de </a></li>
+                    <li><a href="#">Blog </a></li>
+                    <li><a href="#">Ayuda</a></li>
+                    <li><a href="#">Términos </a></li>
+                    <li><a href="#">App</a></li>
+                    <li><a href="#">Ajustes</a></li>
+                    <li><a href="#">Contactos </a></li>
+                    <li><a href="#">Estado</a></li>
+                    <li><a href="#">Política de privacidad</a></li>
+                    <li><a href="#">Marca</a></li>
+                    <li><a href="#">Desarroladores</a></li>
+                </ul>
+            </footer>
+
+            <!--FIN DEL PIE DE PÁGINA-->
+            <!--FIN DE PÁGINA PRINCIPAL-->
+
+        </section>
+    </body>
 </html>
